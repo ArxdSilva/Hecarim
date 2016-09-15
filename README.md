@@ -1,14 +1,12 @@
 ### Life intent
-This is a Library for Riot Games API made in Go by @arxdSilva to train Golang.
+This is a Library for Riot Games API made in Go by **[@arxdSilva](!twitter.com/arxdsilva)** to keep trainning Golang.
 
 ### References
-Main page for developers:
-http://boo-box.link/2CDHC
-Other APIs:
-http://boo-box.link/2CDHA
+- Main page for developers: **[Getting Started](!https://developer.riotgames.com/docs/getting-started)**
+- Other APIs: **[Link](!https://github.com/meraki-analytics/cassiopeia)**
 
 ### License
 Consult LICENSE file.
 
 ### Usage
--Soon
+- Soon

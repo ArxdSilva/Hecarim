@@ -1,27 +1,25 @@
-package gamequery
+package gamedata
 
-import "fmt"
-
-// Region ...
-var Region = []struct {
-	country, short string
+// Regions ...
+var Regions = []struct {
+	Country, Short string
 }{
-	{"brazil", "br"},
-	{"europe_north_east", "eune"},
-	{"europe_west", "euw"},
-	{"japan", "jp"},
-	{"korea", "kr"},
-	{"latin_america_north", "lan"},
-	{"latin_america_south", "las"},
-	{"north_america", "na"},
-	{"oceania", "oce"},
-	{"pbe", "pbe"},
-	{"russia", "ru"},
-	{"turkey", "tr"},
+	{"brazil", "BR"},
+	{"europe_north_east", "EUNE"},
+	{"europe_west", "EUW"},
+	{"japan", "JP"},
+	{"korea", "KR"},
+	{"latin_america_north", "LAN"},
+	{"latin_america_south", "LAS"},
+	{"north_america", "NA"},
+	{"oceania", "OCE"},
+	{"pbe", "PBE"},
+	{"russia", "RU"},
+	{"turkey", "TR"},
 }
 
 var gameMode = []struct {
-	name, short string
+	Name, Short string
 }{
 	{"aram", "ARAM"},
 	{"ascension", "ASCENSION"},
@@ -63,22 +61,6 @@ type playerStatus struct {
 
 // GameData ...
 var GameData struct {
-	playerSt playerStatus
-	queueSt  queueStatus
-}
-
-// SetRegion ...
-func SetRegion(r string) (string, error) {
-	for _, reg := range Region {
-		if r == reg.country {
-			GameData.playerSt.region = r
-			return reg.short, nil
-		}
-		continue
-	}
-	if GameData.playerSt.region == "" {
-		err := fmt.Errorf("Region %s not found", r)
-		return "", err
-	}
-	return "", nil
+	PlayerSt playerStatus
+	QueueSt  queueStatus
 }

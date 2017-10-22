@@ -1,5 +1,0 @@
-package conn
-
-func GetPlayer() {
-
-}

@@ -51,7 +51,7 @@ func getServerTopPlayers(server string) (players *Challenger, err error) {
 	return
 }
 
-func getIdsFromLeagueInfo(players *Challenger) (playersSlice []string) {
+func getIdsFromPlayers(players *Challenger) (playersSlice []string) {
 	for _, p := range players.Entries {
 		playersSlice = append(playersSlice, p.PlayerOrTeamID)
 	}
@@ -105,6 +105,7 @@ func launchGame(server string, game *GameInfo) (err error) {
 	if err != nil {
 		return
 	}
+	fmt.Println("ABRIR JOGO")
 	// ABRIR JOGO
 	return
 }
